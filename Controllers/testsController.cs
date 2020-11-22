@@ -27,5 +27,10 @@ namespace TesterukASP.Controllers
             ViewBag.IdUser = User.Identity.GetUserId();
             return View();
         }
+        public ActionResult Test4()
+        {
+            ViewBag.IdUser = User.Identity.GetUserId();
+            return View();
+        }
     }
 }

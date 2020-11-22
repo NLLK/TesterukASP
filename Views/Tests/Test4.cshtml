@@ -1,0 +1,58 @@
+﻿<div id="left" class="position">
+    <form onSubmit="countScore('@ViewBag.IdUser',4)" action="~/UserAccount" method="post">
+        <h4>Тест по C#.</h4>
+
+        <p><b>Что делает модификатор sealed?</b></p>
+        <p><input type="radio" name="q1" value="0" checked> Ограничивает видимость текущей сборкой </p>
+        <p><input type="radio" name="q1" value="1"> Запрещает наследование</p>
+        <p><input type="radio" name="q1" value="0"> Разрешает наследование только один раз</p>
+        <p><input type="radio" name="q1" value="0"> Добавляется просто для наглядности, но ничего не изменяет </p>
+
+        <p><b>Выполнится ли блок finally, если исключения не было?</b></p>
+        <p><input type="radio" name="q2" value="0" checked> Зависит от режима работы</p>
+        <p><input type="radio" name="q2" value="1"> Да </p>
+        <p><input type="radio" name="q2" value="0"> Нет </p>
+        <p><input type="radio" name="q2" value="0"> Зависит от кода </p>
+
+        <p><b>Можно ли сделать перегрузку операторов true и false?</b></p>
+        <p><input type="radio" name="q3" value="0" checked> Нет</p>
+        <p><input type="radio" name="q3" value="1"> Да</p>
+
+        <p><b>Какой способ вызова исключения является корректным?</b></p>
+        <p><input type="radio" name="q4" value="0" checked> throw Exception(); </p>
+        <p><input type="radio" name="q4" value="0">  new Exception(); </p>
+        <p><input type="radio" name="q4" value="1">  throw new Exception(); </p>
+        <p><input type="radio" name="q4" value="0"> Exception(); </p>
+
+        <p><b>Что делает модификатор partial?</b></p>
+        <p><input type="radio" name="q5" value="0" checked> Запрещает наследование </p>
+        <p><input type="radio" name="q5" value="0"> Ограничивает видимость текущим классом </p>
+        <p><input type="radio" name="q5" value="1"> Позволяет разделять сущность на несколько частей </p>
+        <p><input type="radio" name="q5" value="0"> Позволяет использовать неуправляемый код </p>
+
+        <p><b>Можно ли сделать перегрузку оператора присваивания?</b></p>
+        <p><input type="radio" name="q6" value="1" checked>  Нет </p>
+        <p><input type="radio" name="q6" value="0"> Да </p>
+
+        <p><b>Тип string является значимым или ссылочным типом?</b></p>
+        <p><input type="radio" name="q7" value="1" checked> Ссылочным </p>
+        <p><input type="radio" name="q7" value="0"> Значимым </p>
+
+        <p><b>Можно ли наследоваться от нескольких интерфейсов?</b></p>
+        <p><input type="radio" name="q8" value="1" checked> Да </p>
+        <p><input type="radio" name="q8" value="0"> Нет </p>
+
+        <p><b>C# код компилируется в код …</b></p>
+        <p><input type="radio" name="q9" value="0" checked>  CLI </p>
+        <p><input type="radio" name="q9" value="1"> CIL </p>
+        <p><input type="radio" name="q9" value="0"> FCL </p>
+        <p><input type="radio" name="q9" value="0"> MASM </p>
+
+        <p><b>Можно ли наследоваться от нескольких классов?</b></p>
+        <p><input type="radio" name="q10" value="0" checked> Да </p>
+        <p><input type="radio" name="q10" value="1"> Нет </p>
+
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+
+</div>

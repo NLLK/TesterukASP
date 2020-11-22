@@ -299,7 +299,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\db.sql" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -489,8 +488,11 @@
     <Content Include="Views\histories\Edit.cshtml" />
     <Content Include="Views\histories\Index.cshtml" />
     <Content Include="Views\UserAccount\Index.cshtml" />
+    <Content Include="Views\Tests\Test4.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

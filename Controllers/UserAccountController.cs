@@ -28,7 +28,7 @@ namespace TesterukASP.Controllers
 
             int count = 0;
             foreach (Models.history el in historyList)
-            {//что-то с листом
+            { 
                 if (count == 0)
                 {
                     list.Add(el);
