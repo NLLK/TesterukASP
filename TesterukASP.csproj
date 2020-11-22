@@ -489,6 +489,7 @@
     <Content Include="Views\histories\Index.cshtml" />
     <Content Include="Views\UserAccount\Index.cshtml" />
     <Content Include="Views\Tests\Test4.cshtml" />
+    <Content Include="Views\Tests\Test5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

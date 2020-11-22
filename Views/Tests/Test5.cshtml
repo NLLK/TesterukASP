@@ -1,0 +1,245 @@
+﻿@model IEnumerable<TesterukASP.Models.history>
+
+<div id="left" class="position">
+    <h2>Нужна помощь с тестами? Обратитесь к обучающим материалам.</h2>
+    <!-- Кнопки для открытия модальных окон -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studyMaterialsHistoryOfC">Как появился язык программирования С++</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studyMaterialsLoops">Циклы</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#studyMaterialsSwitch">Оператор множественного выбора switch</button>
+    <br>
+    <br>
+    <br>
+    <form onSubmit="countScore('@ViewBag.IdUser',5)" action="~/UserAccount" method="post">
+        <!--Циферку тут надо менять на номер теста-->
+        <h3>Основы С++, история возникновения, циклы, switch</h3>
+        <br>
+        <p><b>Что такое ECMAScript?</b></p>
+        <p><input type="radio" name="q1" value="0" checked> Новый язык программирования.</p>
+        <p><input type="radio" name="q1" value="0"> Переработанная реализация Javascript.</p>
+        <p><input type="radio" name="q1" value="1"> Спецификация языка Javascript.</p>
+
+        <p><b>Что получится, если сложить true + false?</b></p>
+        <p><input type="radio" name="q2" value="0" checked> "truefalse"</p>
+        <p><input type="radio" name="q2" value="0"> 0</p>
+        <p><input type="radio" name="q2" value="1"> 1</p>
+        <p><input type="radio" name="q2" value="0"> NaN</p>
+
+        <p><b>Чему равно 0 || "" || 2 || undefined || true || falsе ?</b></p>
+        <p><input type="radio" name="q3" value="0" checked> 0</p>
+        <p><input type="radio" name="q3" value="0"> ""</p>
+        <p><input type="radio" name="q3" value="1"> 2</p>
+        <p><input type="radio" name="q3" value="0"> undefined</p>
+        <p><input type="radio" name="q3" value="0"> true</p>
+        <p><input type="radio" name="q3" value="0"> false</p>
+
+        <p><b>Верно ли сравнение: "ёжик" > "яблоко"?</b></p>
+        <p><input type="radio" name="q4" value="1" checked> Да.</p>
+        <p><input type="radio" name="q4" value="0"> Нет.</p>
+        <p><input type="radio" name="q4" value="0"> Зависит от локальных настроек браузера.</p>
+
+        <p><b>Чему равно 0 || 1 && 2 || 3 ?</b></p>
+        <p><input type="radio" name="q5" value="0" checked> 0</p>
+        <p><input type="radio" name="q5" value="0"> 1</p>
+        <p><input type="radio" name="q5" value="1"> 2</p>
+        <p><input type="radio" name="q5" value="0"> 3</p>
+        <p><input type="radio" name="q5" value="0"> true</p>
+        <p><input type="radio" name="q5" value="0"> false</p>
+
+        <p><b>Чему равна сумма [] + 1 + 2?</b></p>
+        <p><input type="radio" name="q6" value="0" checked> 1</p>
+        <p><input type="radio" name="q6" value="0"> NaN</p>
+        <p><input type="radio" name="q6" value="0"> undefined</p>
+        <p><input type="radio" name="q6" value="1"> 12</p>
+        <p><input type="radio" name="q6" value="0"> Другое</p>
+
+        <p><b> Чему равно 2 && 1 && null && 0 && undefined ?</b></p>
+        <p><input type="radio" name="q7" value="0" checked> 2</p>
+        <p><input type="radio" name="q7" value="0"> 1</p>
+        <p><input type="radio" name="q7" value="1"> Null</p>
+        <p><input type="radio" name="q7" value="0"> 0</p>
+        <p><input type="radio" name="q7" value="0"> undefined</p>
+        <p><input type="radio" name="q7" value="0"> false</p>
+
+        <p><b>Что выведет этот код?</b></p>
+        <p><b>alert( 20e-1['toString'](2) );</b></p>
+        <p><input type="radio" name="q8" value="0" checked>2</p>
+        <p><input type="radio" name="q8" value="1"> 10</p>
+        <p><input type="radio" name="q8" value="0"> 20</p>
+
+        <p><b>Какой результат будет у выражения ниже?</b></p>
+        <p><b>null + {0:1}[0] + [,[1],][1][0]</b></p>
+        <p><input type="radio" name="q9" value="0" checked> 0</p>
+        <p><input type="radio" name="q9" value="0"> 1</p>
+        <p><input type="radio" name="q9" value="1"> 2</p>
+        <p><input type="radio" name="q9" value="0"> undefined</p>
+
+        <p><b>Есть ли различия между проверками:</b></p>
+        <p><b>if( x <= 100 ) {...}</b></p>
+        <p><b>и</b></p>
+        <p><b>if( !(x > 100) ) {...}</b></p>
+        <p><input type="radio" name="q10" value="1" checked> Да, существует значение x, для которого они работают по-разному.</p>
+        <p><input type="radio" name="q10" value="0"> Нет, они полностью взаимозаменяемы.</p>
+        <p><input type="radio" name="q10" value="0"> Зависит от браузера.</p>
+
+        <p><input type="submit" value="Отправить"></p>
+    </form>
+</div>
+
+
+<!-- Модальные окна -->
+<!-- Окно с обучающей информацией по истории языка С++ -->
+<div class="modal fade bd-example-modal-lg" id="studyMaterialsHistoryOfC" tabindex="-1" role="dialog" aria-labelledby="studyMaterialsHistoryOfCTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studyMaterialsHistoryOfCTitle">Как появился язык программирования С++</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    C++ компилируемый язык программирования общего назначения, сочетает свойства как высокоуровневых, так и низкоуровневых языков программирования.
+                    В сравнении с его предшественником, языком программирования Cи, наибольшее внимание уделено поддержке объектно-ориентированного и обобщённого программирования.
+                    Название «язык программирования C++» происходит от языка программирования C, в котором унарный оператор ++ обозначает инкремент переменной.
+                </p>
+                <p>
+                    Язык программирования C++ широко используется для разработки программного обеспечения. А именно, создание разнообразных прикладных программ,
+                    разработка операционных систем, драйверов устройств, а также видео игр и многое другое. Существует несколько реализаций языка программирования
+                    C++ — как бесплатных, так и коммерческих. Их производят проекты: GNU, Microsoft и Embarcadero (Borland).
+                    Проект GNU  — проект разработки свободного программного обеспечения (СПО).
+                </p>
+                <p>
+                    Язык программирования С++ был создан в начале 1980-х годов, его создатель сотрудник фирмы Bell Laboratories — Бьёрн Страуструп.
+                </p>
+                <p>
+                    Он придумал ряд усовершенствований к языку программирования C, для собственных нужд. Т. е. изначально не планировалось создания языка программирования С++.
+                    Ранние версии языка С++, известные под именем «Cи с классами», начали появляться с 1980 года.
+                    Язык C, будучи базовым языком системы UNIX, на которой работали компьютеры фирмы Bell, является быстрым, многофункциональным и переносимым.
+                    Страуструп добавил к нему возможность работы с классами и объектами, тем самым зародил предпосылки нового, основанного на синтаксисе С, языка программирования.
+                    Синтаксис C++ был основан на синтаксисе C, так как Бьёрн Страуструп стремился сохранить совместимость с языком C.
+                </p>
+                <p>
+                    В 1983 году произошло переименование языка из «Cи с классами»в «язык программирования C++».
+                </p>
+                <p>
+                    В него были добавлены новые возможности: виртуальные функции, перегрузка функций и операторов, ссылки, константы и многое другое. Его первый коммерческий выпуск состоялся в октябре 1985 года.
+                </p>
+                <p>
+                    Язык программирования C++ является свободным, то есть никто не обладает на него правами.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Окно с обучающей информацией по циклу for -->
+<div class="modal fade bd-example-modal-lg" id="studyMaterialsLoops" tabindex="-1" role="dialog" aria-labelledby="studyMaterialsLoopsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studyMaterialsLoopsTitle">Цикл for</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <b>Что такое цикл?</b>
+                    <br>
+                    Цикл — многократное прохождение по одному и тому же коду программы. Циклы необходимы программисту для многократного выполнения одного и того же кода,
+                    пока истинно какое-то условие. Если условие всегда истинно, то такой цикл называется бесконечным, у такого цикла нет точки выхода.
+                </p>
+                <p>
+                    <b>Цикл for</b>
+                    <br>
+                    Цикл for - итерационный цикл. Форма записи оператора цикла for:
+                    for(/*выражение1*/; /*выражение2*/; /*выражение3*/) {
+                    /*один оператор или блок операторов*/;
+                    }
+                    Тело цикла будет выполняться до тех пор, пока условие будет истинно(т. е. true).
+                    Если в теле цикла for должен выполнится один оператор, тогда фигурные скобки можно опустить
+                </p>
+                <p>
+                    <b>Цикл while</b>
+                    <br>
+                    Цикл while является циклом с предусловием. Он будет повторять одно и то же действие, пока условие продолжения цикла while остаётся истинным.
+                    Форма записи оператора цикла while:
+                    while(/*условие продолжения цикла while*/) {
+                    /*блок операторов*/;
+                    /*управление условием*/;
+                    }
+                    Условие продолжения цикла должно быть истинно true, как только условие стало ложным, выполняется выход из цикла.
+                    Также как и в условных операторах выбора, фигурные скобочки могут опускаться в том случае, если тело цикла — это один оператор.
+                </p>
+                <p>
+                    <b>Цикл do while</b>
+                    <br>
+                    Цикл do while является циклом с постусловием. Он отличается от цикла while тем, что в do while сначала выполняется тело цикла,
+                    а затем проверяется условие продолжения цикла. Таким образом, если условие do while заведомо ложное, то хотя бы один раз блок операторов
+                    в теле цикла do while выполнится.
+                    Форма записи оператора цикла do while:
+                    do {
+                    /*блок операторов*/;
+                    }
+                    while (/*условие продолжения цикла*/);
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Окно с обучающей информацией по оператору множественного выбора switch -->
+<div class="modal fade bd-example-modal-lg" id="studyMaterialsSwitch" tabindex="-1" role="dialog" aria-labelledby="studyMaterialsSwitchTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="studyMaterialsSwitchTitle">Оператор множественного выбора switch</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Форма записи оператора множественного выбора switch:
+                    <br>
+                    switch ( <переменная>
+                        ) {
+                        <br>
+                        case значение1:
+                        Выполнить если <переменная>
+                            == значение1
+                            <br>
+                            break;
+                            <br>
+                            case значение2:
+                            Выполнить если <переменная>
+                                == значение2
+                                <br>
+                                break;
+                                <br>
+                                ...
+                                default:
+                                выполнить, если ни один вариант не подошел
+                                <br>
+                                break;
+                                }
+                                <br>
+                                На начальном этапе анализируется выражение или переменная. После чего осуществляется переход к той ветви программы, для которой значение переменной
+                                или выражения совпадает с указанным константным выражением. Далее выполняется оператор или группа операторов пока не встретится зарезервированное слово
+                                break или закрывающая фигурная скобочка. Если значение переменной или выражения не совпадает ни с одним константным выражением, то передается управление
+                                ветви программы содержащей зарезервированное слово default. После чего выполняется оператор или группа операторов данной ветви.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
