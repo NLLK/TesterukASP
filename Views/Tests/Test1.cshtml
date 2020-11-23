@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<TesterukASP.Models.history>
-
+@{
+    ViewBag.Title = "Тест";
+}
 <div id="left" class="position">
     <h2>Нужна помощь с тестами? Обратитесь к обучающим материалам.</h2>
     <!-- Кнопки для открытия модальных окон -->
@@ -9,7 +11,8 @@
     <br>
     <br>
     <br>
-    <form onSubmit="countScore('@ViewBag.IdUser',1)" action="~/UserAccount" method="post"><!--Циферку тут надо менять на номер теста-->
+    <form onSubmit="countScore('@ViewBag.IdUser',1)" action="~/UserAccount" method="post">
+        <!--Циферку тут надо менять на номер теста-->
         <h3>Основы С++, история возникновения, циклы, switch</h3>
         <br>
         <p><b>Выберите цикл с постусловием</b></p>
