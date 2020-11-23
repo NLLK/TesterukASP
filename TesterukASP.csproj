@@ -448,6 +448,9 @@
     <None Include="Views\Tests\Test3.cshtml" />
     <None Include="Views\Tests\Test2.cshtml" />
     <None Include="Views\Tests\Test1.cshtml" />
+    <Content Include="Content\Images\i1.jpg" />
+    <Content Include="Content\Images\i2.jpg" />
+    <Content Include="Content\Images\i3.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
